@@ -1,0 +1,64 @@
+/* Mobile Nav Styles - START */
+/* This nav style works with the Sidebar.js file. Check how the SideBar is used in App.js. */
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 17rem; /* width of the sidebar. */
+    background-color: #fefeff;
+    border-right: rgba(0,0,0, 0.1) 1px solid;
+    z-index: 1;
+}
+
+.mobile-nav-enter {
+    opacity: 0.8;
+    transform: translateX(-17rem); /* -(minus) same width above  */
+}
+
+.mobile-nav-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;/* transition time should match timeout in Sidebar.js*/
+}
+
+.mobile-nav-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-nav-exit-active {
+    opacity: 0.8;
+    transform: translateX(-17rem); /* -(minus) same width above  */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* transition time should match timeout in Sidebar.js*/
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mobile-nav-overlay-enter {
+    opacity: 0;
+}
+
+.mobile-nav-overlay-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* transition time should match timeout in Sidebar.js*/
+}
+
+.mobile-nav-overlay-exit {
+    opacity: 1;
+}
+
+.mobile-nav-overlay-exit-active {
+    opacity: 0;
+    transition: opacity 0.5s ease-out; /* transition time should match timeout in Sidebar.js*/
+}
+
+/* Mobile Nav Styles - END */
